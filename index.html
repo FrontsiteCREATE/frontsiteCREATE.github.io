@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontSite | Создание фронтенд сайтов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="background">
+        <div class="particles"></div>
+        <div class="gradient-circle"></div>
+    </div>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon"><i class="fas fa-code"></i></span>
+            <span class="logo-text">Front<span>Site</span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Главная</a></li>
+            <li><a href="#services" class="nav-link">Услуги</a></li>
+            <li><a href="#about" class="nav-link">О нас</a></li>
+            <li><a href="#contact" class="nav-link">Контакты</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-word title-word-1">Создаём</span>
+                <span class="title-word title-word-2">инновационные</span>
+                <span class="title-word title-word-3">фронтенд</span>
+                <span class="title-word title-word-4">решения</span>
+            </h1>
+            <p class="hero-subtitle">Профессиональная разработка сайтов на HTML, CSS и JavaScript с современными анимациями и эффектами</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary pulse">Связаться с нами</a>
+                <a href="#services" class="btn-secondary">Наши услуги</a>
+            </div>
+        </div>
+        <div class="hero-code">
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <pre class="code-content">
+<span class="code-line"><span class="code-tag">&lt;!DOCTYPE html&gt;</span></span>
+<span class="code-line"><span class="code-tag">&lt;html&gt;</span></span>
+<span class="code-line"><span class="code-tag">&lt;head&gt;</span></span>
+<span class="code-line">  <span class="code-tag">&lt;title&gt;</span>Ваш успешный бизнес<span class="code-tag">&lt;/title&gt;</span></span>
+<span class="code-line">  <span class="code-tag">&lt;style&gt;</span><span class="code-comment">/* Магия CSS */</span><span class="code-tag">&lt;/style&gt;</span></span>
+<span class="code-line"><span class="code-tag">&lt;/head&gt;</span></span>
+<span class="code-line"><span class="code-tag">&lt;body&gt;</span></span>
+<span class="code-line">  <span class="code-tag">&lt;div</span> <span class="code-attr">class</span>=<span class="code-string">"success"</span><span class="code-tag">&gt;</span></span>
+<span class="code-line">    <span class="code-tag">&lt;h1&gt;</span>Ваш сайт готов!<span class="code-tag">&lt;/h1&gt;</span></span>
+<span class="code-line">  <span class="code-tag">&lt;/div&gt;</span></span>
+<span class="code-line">  <span class="code-tag">&lt;script&gt;</span><span class="code-comment">// Интерактивность JS</span><span class="code-tag">&lt;/script&gt;</span></span>
+<span class="code-line"><span class="code-tag">&lt;/body&gt;</span></span>
+<span class="code-line"><span class="code-tag">&lt;/html&gt;</span></span>
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services">
+        <h2 class="section-title">Наши <span>Услуги</span></h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3>HTML Разработка</h3>
+                <p>Семантическая, адаптивная вёрстка по современным стандартам</p>
+                <div class="service-tags">
+                    <span>HTML5</span>
+                    <span>Pug</span>
+                    <span>SEO</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3>CSS Стилизация</h3>
+                <p>Анимации, трансформации, Flexbox, Grid и современные эффекты</p>
+                <div class="service-tags">
+                    <span>CSS3</span>
+                    <span>SASS</span>
+                    <span>Анимации</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fab fa-js"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Интерактивность, динамический контент, сложная логика</p>
+                <div class="service-tags">
+                    <span>ES6+</span>
+                    <span>React</span>
+                    <span>Vue</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+        <h2 class="section-title">Почему <span>мы?</span></h2>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="about-text">
+                        <h3>Скорость разработки</h3>
+                        <p>Используем современные технологии и методологии для быстрой реализации проектов</p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="about-text">
+                        <h3>Креативный дизайн</h3>
+                        <p>Создаём уникальные, запоминающиеся интерфейсы с современными анимациями</p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="about-text">
+                        <h3>Адаптивность</h3>
+                        <p>Все сайты идеально работают на любых устройствах и разрешениях экрана</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">проектов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">довольных клиентов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">часа поддержки</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Свяжитесь <span>с нами</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card glow">
+                    <div class="contact-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram владельца</h3>
+                    <p>Напрямую владельцу компании для обсуждения проектов</p>
+                    <a href="https://t.me/Sleep_elo1" target="_blank" class="contact-link">
+                        <i class="fab fa-telegram"></i> @Sleep_elo1
+                    </a>
+                    <p class="contact-note">Отвечаем в течение 30 минут</p>
+                </div>
+                <div class="contact-card glow">
+                    <div class="contact-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Бот-помощник</h3>
+                    <p>Узнайте всё необходимое о наших услугах и ценах</p>
+                    <a href="https://t.me/FrontSite_bot" target="_blank" class="contact-link">
+                        <i class="fas fa-robot"></i> @FrontSite_bot
+                    </a>
+                    <p class="contact-note">Работает 24/7</p>
+                </div>
+                <div class="contact-card glow">
+                    <div class="contact-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Наши технологии</h3>
+                    <p>Специализируемся на современных фронтенд технологиях</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">HTML5</span>
+                        <span class="tech-item">CSS3</span>
+                        <span class="tech-item">JavaScript</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Vue.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                <span class="logo-text">Front<span>Site</span></span>
+            </div>
+            <p class="footer-text">Создаём цифровые решения, которые работают на ваш успех</p>
+            <div class="footer-tech">
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+                <i class="fab fa-react" title="React"></i>
+                <i class="fab fa-vuejs" title="Vue.js"></i>
+            </div>
+            <p class="copyright">© 2024 FrontSite. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Кнопка наверх -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
