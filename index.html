@@ -2,24 +2,48 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrontSite | Создание фронтенд сайтов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>ClaritySites | Создание сайтов и Telegram ботов</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Экран загрузки -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <i class="fas fa-code"></i>
+                <span>Clarity<span>Sites</span></span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <div class="loader-text">Загрузка...</div>
+        </div>
+    </div>
+
+    <!-- Переключатель темы -->
+    <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+        <label for="theme-toggle" class="theme-label">
+            <span class="sun"><i class="fas fa-sun"></i></span>
+            <span class="moon"><i class="fas fa-moon"></i></span>
+            <div class="theme-toggle-circle"></div>
+        </label>
+    </div>
+
     <!-- Анимированный фон -->
     <div class="background">
         <div class="particles"></div>
         <div class="gradient-circle"></div>
     </div>
 
-    <!-- Навигация -->
-    <nav class="navbar">
+    <!-- Навигация с анимацией скрытия/появления -->
+    <nav class="navbar" id="navbar">
         <div class="logo">
             <span class="logo-icon"><i class="fas fa-code"></i></span>
-            <span class="logo-text">Front<span>Site</span></span>
+            <span class="logo-text">Clarity<span>Sites</span></span>
         </div>
         <ul class="nav-menu">
             <li><a href="#home" class="nav-link">Главная</a></li>
@@ -40,10 +64,10 @@
             <h1 class="hero-title">
                 <span class="title-word title-word-1">Создаём</span>
                 <span class="title-word title-word-2">инновационные</span>
-                <span class="title-word title-word-3">фронтенд</span>
-                <span class="title-word title-word-4">решения</span>
+                <span class="title-word title-word-3">сайты</span>
+                <span class="title-word title-word-4">и боты</span>
             </h1>
-            <p class="hero-subtitle">Профессиональная разработка сайтов на HTML, CSS и JavaScript с современными анимациями и эффектами</p>
+            <p class="hero-subtitle">Профессиональная разработка сайтов и Telegram ботов на Python с современными анимациями и эффектами</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary pulse">Связаться с нами</a>
                 <a href="#services" class="btn-secondary">Наши услуги</a>
@@ -83,37 +107,85 @@
                 <div class="service-icon">
                     <i class="fab fa-html5"></i>
                 </div>
-                <h3>HTML Разработка</h3>
-                <p>Семантическая, адаптивная вёрстка по современным стандартам</p>
-                <div class="service-tags">
-                    <span>HTML5</span>
-                    <span>Pug</span>
-                    <span>SEO</span>
+                <h3>Создание сайтов</h3>
+                <p>Создаем сайты от 1 часа до 3 дней с современным дизайном</p>
+                <div class="service-details">
+                    <div class="price-item">
+                        <span class="price-name">Сайт-визитка:</span>
+                        <span class="price-value">1500₽ - 3500₽</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-name">Сложный сайт:</span>
+                        <span class="price-value">2000₽ - 6000₽</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-name">Сложные проекты:</span>
+                        <span class="price-value">6000₽ - 25000₽</span>
+                    </div>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-icon">
-                    <i class="fab fa-css3-alt"></i>
+                    <i class="fas fa-robot"></i>
                 </div>
-                <h3>CSS Стилизация</h3>
-                <p>Анимации, трансформации, Flexbox, Grid и современные эффекты</p>
-                <div class="service-tags">
-                    <span>CSS3</span>
-                    <span>SASS</span>
-                    <span>Анимации</span>
+                <h3>Telegram боты</h3>
+                <p>Создание Telegram ботов на Python под заказ</p>
+                <div class="service-details">
+                    <div class="price-item">
+                        <span class="price-name">Простые боты:</span>
+                        <span class="price-value">1000₽ - 3000₽</span>
+                        <div class="price-note">Срок: 1-24 часа</div>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-name">Средние боты:</span>
+                        <span class="price-value">2000₽ - 5000₽</span>
+                        <div class="price-note">Срок: 1-2 дня</div>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-name">Сложные боты:</span>
+                        <span class="price-value">5000₽ - 15000₽</span>
+                        <div class="price-note">Срок: 2-3 дня</div>
+                    </div>
                 </div>
             </div>
             <div class="service-card">
                 <div class="service-icon">
-                    <i class="fab fa-js"></i>
+                    <i class="fas fa-cogs"></i>
                 </div>
-                <h3>JavaScript</h3>
-                <p>Интерактивность, динамический контент, сложная логика</p>
+                <h3>Стабилизация анимаций</h3>
+                <p>Занимаемся стабилизацией анимаций на ваших сайтах</p>
                 <div class="service-tags">
-                    <span>ES6+</span>
-                    <span>React</span>
-                    <span>Vue</span>
+                    <span>CSS Анимации</span>
+                    <span>JavaScript</span>
+                    <span>Оптимизация</span>
                 </div>
+                <p class="price-note">Цена обсуждается лично</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Улучшение дизайна</h3>
+                <p>Делаем ваши сайты красивее и добавляем больше блоков</p>
+                <div class="service-tags">
+                    <span>UI/UX Дизайн</span>
+                    <span>Веб-дизайн</span>
+                    <span>Адаптивность</span>
+                </div>
+                <p class="price-note">Цена обсуждается лично</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mouse-pointer"></i>
+                </div>
+                <h3>Оптимизация интерактива</h3>
+                <p>Стабилизация нажатий и правильные переходы на сайте</p>
+                <div class="service-tags">
+                    <span>Интерактивность</span>
+                    <span>Юзабилити</span>
+                    <span>Навигация</span>
+                </div>
+                <p class="price-note">Цена обсуждается лично</p>
             </div>
         </div>
     </section>
@@ -128,8 +200,8 @@
                         <i class="fas fa-bolt"></i>
                     </div>
                     <div class="about-text">
-                        <h3>Скорость разработки</h3>
-                        <p>Используем современные технологии и методологии для быстрой реализации проектов</p>
+                        <h3>Быстрая разработка</h3>
+                        <p>Создаем сайты от 1 часа до 3 дней. Используем современные технологии для быстрой реализации проектов</p>
                     </div>
                 </div>
                 <div class="about-item">
@@ -137,8 +209,8 @@
                         <i class="fas fa-paint-brush"></i>
                     </div>
                     <div class="about-text">
-                        <h3>Креативный дизайн</h3>
-                        <p>Создаём уникальные, запоминающиеся интерфейсы с современными анимациями</p>
+                        <h3>Красивый дизайн</h3>
+                        <p>Создаём уникальные, запоминающиеся интерфейсы с современными анимациями и эффектами</p>
                     </div>
                 </div>
                 <div class="about-item">
@@ -146,8 +218,17 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="about-text">
-                        <h3>Адаптивность</h3>
+                        <h3>Идеальная адаптивность</h3>
                         <p>Все сайты идеально работают на любых устройствах и разрешениях экрана</p>
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="about-text">
+                        <h3>Поддержка 24/7</h3>
+                        <p>Гарантируем быструю поддержку и решение всех вопросов по вашему проекту</p>
                     </div>
                 </div>
             </div>
@@ -164,6 +245,10 @@
                     <div class="stat-number" data-count="24">0</div>
                     <div class="stat-label">часа поддержки</div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label">дня максимальный срок</div>
+                </div>
             </div>
         </div>
     </section>
@@ -173,6 +258,17 @@
         <h2 class="section-title">Свяжитесь <span>с нами</span></h2>
         <div class="contact-container">
             <div class="contact-info">
+                <div class="contact-card glow">
+                    <div class="contact-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram канал</h3>
+                    <p>Подпишитесь на наш канал для получения полезных материалов и обновлений</p>
+                    <a href="https://t.me/ClaritySites" target="_blank" class="contact-link">
+                        <i class="fab fa-telegram"></i> @ClaritySites
+                    </a>
+                    <p class="contact-note">Актуальные новости и примеры работ</p>
+                </div>
                 <div class="contact-card glow">
                     <div class="contact-icon">
                         <i class="fab fa-telegram"></i>
@@ -191,23 +287,9 @@
                     <h3>Бот-помощник</h3>
                     <p>Узнайте всё необходимое о наших услугах и ценах</p>
                     <a href="https://t.me/FrontSite_bot" target="_blank" class="contact-link">
-                        <i class="fas fa-robot"></i> @FrontSite_bot
+                        <i class="fas fa-robot"></i> @ClaritySites_bot
                     </a>
                     <p class="contact-note">Работает 24/7</p>
-                </div>
-                <div class="contact-card glow">
-                    <div class="contact-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Наши технологии</h3>
-                    <p>Специализируемся на современных фронтенд технологиях</p>
-                    <div class="tech-stack">
-                        <span class="tech-item">HTML5</span>
-                        <span class="tech-item">CSS3</span>
-                        <span class="tech-item">JavaScript</span>
-                        <span class="tech-item">React</span>
-                        <span class="tech-item">Vue.js</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -218,7 +300,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <span class="logo-icon"><i class="fas fa-code"></i></span>
-                <span class="logo-text">Front<span>Site</span></span>
+                <span class="logo-text">Clarity<span>Sites</span></span>
             </div>
             <p class="footer-text">Создаём цифровые решения, которые работают на ваш успех</p>
             <div class="footer-tech">
@@ -227,8 +309,9 @@
                 <i class="fab fa-js" title="JavaScript"></i>
                 <i class="fab fa-react" title="React"></i>
                 <i class="fab fa-vuejs" title="Vue.js"></i>
+                <i class="fab fa-python" title="Python"></i>
             </div>
-            <p class="copyright">© 2024 FrontSite. Все права защищены.</p>
+            <p class="copyright">© 2024 ClaritySites. Все права защищены.</p>
         </div>
     </footer>
 
